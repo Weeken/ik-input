@@ -1,0 +1,35 @@
+{
+  "name": "test-components",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "style": "index.css",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.es.js",
+      "require": "./index.umd.js"
+    },
+    "./index.css": "./index.css"
+  },
+  "dependencies": {
+    "element-plus": "^2.2.5",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.43",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "sass": "^1.52.3",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.8.8",
+    "unplugin-vue-components": "^0.19.6",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.34.7"
+  }
+}
