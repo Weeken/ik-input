@@ -9,14 +9,14 @@
   },
   "main": "index.umd.js",
   "module": "index.es.js",
-  "style": "index.css",
+  "style": "style.css",
   "type": "module",
   "exports": {
     ".": {
       "import": "./index.es.js",
       "require": "./index.umd.js"
     },
-    "./index.css": "./index.css"
+    "./style.css": "./style.css"
   },
   "dependencies": {
     "element-plus": "^2.2.5",
