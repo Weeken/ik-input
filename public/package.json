@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production && vue-tsc --emitDeclarationOnly",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview"
   },
   "main": "index.umd.js",

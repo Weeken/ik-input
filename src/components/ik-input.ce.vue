@@ -12,9 +12,9 @@
 
 <script lang="ts" setup>
 // import { ElInput } from 'element-plus'
-import { ref, withDefaults, defineProps, onMounted } from 'vue'
+import { ref, withDefaults, defineProps, onMounted, watch } from 'vue'
 
-interface Props {
+export interface Props {
   value: string
 }
 const input = ref('')
@@ -23,6 +23,13 @@ const date = ref('')
 const props = withDefaults(defineProps<Props>(), {
 	value: ''
 })
+
+watch(
+  () => props.value,
+  () => {
+    input.value = props.value
+  }
+)
 
 const emits = defineEmits(['blur'])
 
@@ -36,11 +43,10 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-// @import 'element-plus/dist/index.css';
   @import 'element-plus/theme-chalk/src/input.scss';
   @import 'element-plus/theme-chalk/src/date-picker.scss';
- .input{
-  width: 200px;
-  height: 40px;
- }
+  .input{
+    width: 200px;
+    height: 40px;
+  }
 </style>

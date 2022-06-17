@@ -26,7 +26,7 @@ export default defineConfig({
       entry: 'src/components/index.ts', // 设置入口文件
       name: 'IkInput', // 起个名字，安装、引入用
       fileName: (format) => `index.${format}.js` // 打包后的文件名
-    },
+    }
     // rollupOptions: {
       // external: ['vue'],
       // output: {
